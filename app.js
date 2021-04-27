@@ -20,12 +20,12 @@ const students = [];
 
 //home page (forms)
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname+'/home.html')
+    res.sendFile(__dirname+'/homepage.html')
 });
 
 // Create Course
 app.get('/web/courses/create',(req,res)=>{
-    res.sendFile(__dirname+'/create_course.html')
+    res.sendFile(__dirname+'/createCourse.html')
 });
 
 // to get all courses
@@ -132,7 +132,10 @@ function CourseView(course,res)
     'Course Description': course.coursedescription});
 }
 
-//-----------------------------------------------------students---------------------------------------------------------------
+
+
+/////// students/////////
+
 // to get all students
 app.get('/api/students', (req, res) => 
 {
@@ -152,7 +155,7 @@ app.get('/api/students/:id', (req, res) =>
 });
 
 app.get('/web/students/create',(req,res)=>{
-    res.sendFile(__dirname+'/create_student.html')
+    res.sendFile(__dirname+'/createStudent.html')
 });
 
 //create student
@@ -237,4 +240,3 @@ function StudentView(student,res)
     'Course ID': student.id});
 }
 
-//app.listen(port /*PortNumber*/, () => console.log(`Listeneing on port ${port}......`));

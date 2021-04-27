@@ -1,13 +1,28 @@
 <!DOCTYPE html>
+
+
+<body style="  max-width: 500px;
+  margin: auto;
+  margin-top: 200px;">
+
 <html>
+
     <head>
+        <style>
+        body {
+        background-image: url("https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        }
+        </style>
         <title>
             Add new course
         </title>
     </head>
 
     <body>
-        <h1>Course Page</h1>
+        <h1>Course Creation page</h1>
         <br>
         <form action="/api/courses/create" method="post">
             <label>Course Name</label>
@@ -20,9 +35,9 @@
             <br><br>
             <label>Course Description</label>
             <br>
-            <textarea name="coursedescription" id="" cols="20" rows="20"></textarea>
+            <textarea name="coursedescription" id="" cols="50" rows="20"></textarea>
             <br><br>
-            <input type="submit">
+            <input type="submit" value="Create course">
         </form>
     </body>
 
